@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Tajawal|Raleway+Dots" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id='container'>
+        <div id='heading'>
+            <h1 id='title'>Autonomous Missed Connections</h1>
+            <h4 id='subtitle'>generative computational longing</h4>
+        </div>
+
+        <div id="body">
+            <div id='poem'>
+                {% for line in poem %}
+                    <p class='here'>{{ line }}</p>
+                {% endfor %}
+            </div>
+            <p id="the_next_one">next<i class="arrow right"></i></p>
+        </div>  
+    </div>
+    
+    
+    <script>
+        $( "#the_next_one" ).click(remove_and_append);
+
+        function remove_and_append() {
+            const poem = document.querySelector('#poem')
+            removeChild(poem)
+            appendChild(poem)
+        }
+        function removeChild(old) {
+            const poem = old
+            const num_children = poem.children.length
+
+            for (let i = 0; i < num_children; i++) {
+                poem.removeChild(document.querySelector('.here'))
+            }
+        }
+
+        function appendChild(old) {
+            const poem = old
+            $.get( "/more_connections", function(data) {
+                for (let i = 0; i < data.poem.length; i++) {
+                    const new_line = document.createElement("p");
+                    new_line.className = "here"
+                    new_line.innerHTML = data.poem[i]
+                    poem.appendChild(new_line)
+                } 
+            }) 
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<!--             $.get( "/more_connections", function(data) {
+
+            })  -->
+
+<!-- $( "#post" ).click(function() {
+    $.get( "https://post.craigslist.org/k/fldWr8Mg6RGT9QbbK9LsIw/guYhx?s=edit", function(data) {
+        console.log(data)
+        // for (let i = 0; i < document.querySelectorAll('.here').length; i++) {
+        //     document.querySelectorAll('.here')[i].innerHTML = data.data[i]
+        // }
+    })    
+}); -->

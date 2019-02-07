@@ -1,0 +1,101 @@
+html {
+    /* background-color: #5938e0; */
+    background-color:black;
+}
+
+#container {
+    padding: 2em;
+    margin: 1em;
+}
+
+#poem {
+    /* padding: 2em; */
+    margin: 1em;
+    height: 30%;
+    width: 30%;
+}
+
+#heading {
+    font-family: 'Tajawal';
+    color: white;
+    width: 50%;
+}
+
+#title {
+    font-size: 3em;
+    margin: 0em;
+    padding: 0em;
+}
+
+#subtitle {
+    font-size: 1em;
+    margin: 0em;
+    padding: 0em;
+}
+
+#body {
+    display: inline;
+    font-family: 'Raleway Dots', cursive;
+    color: whitesmoke;
+}
+
+.here {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+button {
+    border: 3px
+}
+
+i {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+  
+
+/* .color { 
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #5938e0);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  } */
