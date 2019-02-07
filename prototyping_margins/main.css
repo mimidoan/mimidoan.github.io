@@ -1,0 +1,16 @@
+html {
+    /* background-color: #5938e0; */
+    background-color:black;
+}
+
+.heading {
+    font-family: 'Tajawal';
+    color: white;
+    width: 50%;
+}
+
+#title {
+    font-size: 3em;
+    margin: 0em;
+    padding: 1em;
+}
